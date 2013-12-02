@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'url' => 'http://localhost',
+	'url' => 'http://localhost/GenericsATS/public/',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -113,7 +113,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+		'Way\Generators\GeneratorsServiceProvider'
 	),
 
 	/*
