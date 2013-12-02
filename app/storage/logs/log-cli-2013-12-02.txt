@@ -1,0 +1,149 @@
+[2013-12-02 14:56:36] log.ERROR: exception 'RuntimeException' with message 'Too many arguments.' in /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php:181
+Stack trace:
+#0 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php(90): Symfony\Component\Console\Input\ArgvInput->parseArgument('index')
+#1 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/Input.php(60): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(226): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ControllerGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#8 {main} [] []
+[2013-12-02 14:56:52] log.ERROR: exception 'RuntimeException' with message 'Too many arguments.' in /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php:181
+Stack trace:
+#0 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php(90): Symfony\Component\Console\Input\ArgvInput->parseArgument('index')
+#1 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/Input.php(60): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(226): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ControllerGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#8 {main} [] []
+[2013-12-02 15:05:24] log.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'syntax error, unexpected ')'' in /opt/lampp/htdocs/GenericAGS/app/routes.php:22
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleShutdown()
+#1 {main} [] []
+[2013-12-02 15:24:27] log.ERROR: exception 'ErrorException' with message 'file_put_contents(views/admin/dashboard.blade.php): failed to open stream: No such file or directory' in /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:78
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 78, Array)
+#1 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(78): file_put_contents('views/admin/das...', 'dashboard.blade')
+#2 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Generators/Generator.php(57): Illuminate\Filesystem\Filesystem->put('views/admin/das...', 'dashboard.blade')
+#3 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Commands/BaseGeneratorCommand.php(20): Way\Generators\Generators\Generator->make('views/admin/das...', '/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Way\Generators\Commands\BaseGeneratorCommand->fire()
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(244): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2013-12-02 15:25:03] log.ERROR: exception 'ErrorException' with message 'file_put_contents(views/admin/dashboard.blade.php): failed to open stream: No such file or directory' in /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:78
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 78, Array)
+#1 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(78): file_put_contents('views/admin/das...', 'dashboard.blade')
+#2 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Generators/Generator.php(57): Illuminate\Filesystem\Filesystem->put('views/admin/das...', 'dashboard.blade')
+#3 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Commands/BaseGeneratorCommand.php(20): Way\Generators\Generators\Generator->make('views/admin/das...', '/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Way\Generators\Commands\BaseGeneratorCommand->fire()
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(244): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2013-12-02 15:26:12] log.ERROR: exception 'ErrorException' with message 'file_put_contents(views/admin/dashboard.blade.php): failed to open stream: No such file or directory' in /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:78
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 78, Array)
+#1 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(78): file_put_contents('views/admin/das...', 'dashboard.blade')
+#2 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Generators/Generator.php(57): Illuminate\Filesystem\Filesystem->put('views/admin/das...', 'dashboard.blade')
+#3 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Commands/BaseGeneratorCommand.php(20): Way\Generators\Generators\Generator->make('views/admin/das...', '/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Way\Generators\Commands\BaseGeneratorCommand->fire()
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(244): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2013-12-02 15:26:22] log.ERROR: exception 'ErrorException' with message 'file_put_contents(/views/admin/dashboard.blade.php): failed to open stream: No such file or directory' in /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:78
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 78, Array)
+#1 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(78): file_put_contents('/views/admin/da...', 'dashboard.blade')
+#2 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Generators/Generator.php(57): Illuminate\Filesystem\Filesystem->put('/views/admin/da...', 'dashboard.blade')
+#3 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Commands/BaseGeneratorCommand.php(20): Way\Generators\Generators\Generator->make('/views/admin/da...', '/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Way\Generators\Commands\BaseGeneratorCommand->fire()
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(244): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2013-12-02 15:26:46] log.ERROR: exception 'ErrorException' with message 'file_put_contents(/views/admin/dashboard.blade.php): failed to open stream: No such file or directory' in /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:78
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 78, Array)
+#1 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(78): file_put_contents('/views/admin/da...', 'dashboard.blade')
+#2 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Generators/Generator.php(57): Illuminate\Filesystem\Filesystem->put('/views/admin/da...', 'dashboard.blade')
+#3 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Commands/BaseGeneratorCommand.php(20): Way\Generators\Generators\Generator->make('/views/admin/da...', '/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Way\Generators\Commands\BaseGeneratorCommand->fire()
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(244): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2013-12-02 15:26:56] log.ERROR: exception 'ErrorException' with message 'file_put_contents(views/admin/dashboard.blade.php): failed to open stream: No such file or directory' in /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:78
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 78, Array)
+#1 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(78): file_put_contents('views/admin/das...', 'dashboard.blade')
+#2 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Generators/Generator.php(57): Illuminate\Filesystem\Filesystem->put('views/admin/das...', 'dashboard.blade')
+#3 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Commands/BaseGeneratorCommand.php(20): Way\Generators\Generators\Generator->make('views/admin/das...', '/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Way\Generators\Commands\BaseGeneratorCommand->fire()
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(244): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2013-12-02 15:27:41] log.ERROR: exception 'ErrorException' with message 'file_put_contents(views/admin/index.blade.php): failed to open stream: No such file or directory' in /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:78
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 78, Array)
+#1 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(78): file_put_contents('views/admin/ind...', 'index.blade')
+#2 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Generators/Generator.php(57): Illuminate\Filesystem\Filesystem->put('views/admin/ind...', 'index.blade')
+#3 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Commands/BaseGeneratorCommand.php(20): Way\Generators\Generators\Generator->make('views/admin/ind...', '/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Way\Generators\Commands\BaseGeneratorCommand->fire()
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(244): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#11 {main} [] []
+[2013-12-02 15:29:49] log.ERROR: exception 'RuntimeException' with message 'Too many arguments.' in /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php:181
+Stack trace:
+#0 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/ArgvInput.php(90): Symfony\Component\Console\Input\ArgvInput->parseArgument('alumni')
+#1 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Input/Input.php(60): Symfony\Component\Console\Input\ArgvInput->parse()
+#2 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(226): Symfony\Component\Console\Input\Input->bind(Object(Symfony\Component\Console\Input\InputDefinition))
+#3 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#8 {main} [] []
+[2013-12-02 15:31:57] log.ERROR: exception 'ErrorException' with message 'file_put_contents(app/views/templates/master.blade.php): failed to open stream: No such file or directory' in /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php:78
+Stack trace:
+#0 [internal function]: Illuminate\Exception\Handler->handleError(2, 'file_put_conten...', '/opt/lampp/htdo...', 78, Array)
+#1 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(78): file_put_contents('app/views/templ...', 'master.blade')
+#2 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Generators/Generator.php(57): Illuminate\Filesystem\Filesystem->put('app/views/templ...', 'master.blade')
+#3 /opt/lampp/htdocs/GenericAGS/vendor/way/generators/src/Way/Generators/Commands/BaseGeneratorCommand.php(20): Way\Generators\Generators\Generator->make('app/views/templ...', '/opt/lampp/htdo...')
+#4 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(108): Way\Generators\Commands\BaseGeneratorCommand->fire()
+#5 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Command/Command.php(244): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /opt/lampp/htdocs/GenericAGS/vendor/laravel/framework/src/Illuminate/Console/Command.php(96): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(897): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(191): Symfony\Component\Console\Application->doRunCommand(Object(Way\Generators\Commands\ViewGeneratorCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /opt/lampp/htdocs/GenericAGS/vendor/symfony/console/Symfony/Component/Console/Application.php(121): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /opt/lampp/htdocs/GenericAGS/artisan(59): Symfony\Component\Console\Application->run()
+#11 {main} [] []
