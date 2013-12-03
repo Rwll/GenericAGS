@@ -8,35 +8,16 @@
         {{ HTML::style('assets/css/admin-master.css') }}
     </head>
     <body>
-        @inlude('commons.admin.navbar')
-        <br>
-        <br>
-        <br>
-        <div class="container">
+        @include('commons.admin.navbar')
+        
+        <div class="container" id="bodyHolder">
             <div class="row">
                 <div class="col-md-3">
                     @include('commons.admin.sidenav')
                     @include('commons.admin.activitylog')
                 </div>
                 <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">Panel heading without title</div>
-                                <div class="panel-body">
-                                    Panel content
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">Panel heading without title</div>
-                                <div class="panel-body">
-                                    Panel content
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @yield('content')
                 </div>
             </div>
         </div>

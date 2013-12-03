@@ -3,7 +3,7 @@
         <i class="fa fa-tasks fa-fw"></i> Activity Logs
     </div>
     <div class="panel-body">
-        <div id="activityLogs" style="max-height:300px;overflow:auto;">
+        <div id="activityLogs">
             <p>
                 <small class="text-success">
                 <i class="fa fa-square fa-fw"></i> admin1 logged in </small>

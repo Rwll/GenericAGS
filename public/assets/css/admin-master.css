@@ -1,3 +1,10 @@
+#activityLogs{
+	max-height:300px;
+	overflow:auto;
+}
 #adminFooter{
 	height:100px;
+}
+#bodyHolder{
+	margin-top: 70px;
 }
