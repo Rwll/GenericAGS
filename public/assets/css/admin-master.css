@@ -8,3 +8,6 @@
 #bodyHolder{
 	margin-top: 70px;
 }
+.recipient:hover{
+	background-color: #f04124;
+}

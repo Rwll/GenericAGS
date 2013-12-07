@@ -23,7 +23,7 @@
                         <li><a href="#"><i class="fa fa-wrench fa-fw"></i>
                               Account Settings</a></li>
                         <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i>
+                        <li><a href="{{ URL::Route('admin-logout') }}"><i class="fa fa-sign-out fa-fw"></i>
                              Sign out</a></li>
                     </ul>
                 </li>

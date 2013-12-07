@@ -38,10 +38,26 @@ Route::filter('auth', function()
 	if (Auth::guest()) return Redirect::guest('login');
 });
 
+Route::filter('auth.admin', function()
+{
+
+	if(Auth::check()){
+		if(Auth::User()->role != 'admin')
+			return 'Permission Denied';
+	}else {
+		return Redirect::to('admin/login');
+	}
+	
+});
 
 Route::filter('auth.basic', function()
 {
-	return Auth::basic();
+	return Auth::basic('username');
+});
+
+Route::filter('basic.once', function()
+{
+    return Auth::onceBasic('username');
 });
 
 /*

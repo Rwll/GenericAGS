@@ -23,8 +23,8 @@
         </div>
         @include('commons.admin.footer')
 
-        {{ HTML::style('assets/js/jquery.js') }}
-        {{ HTML::style('assets/js/bootstrap.min.js') }}        
-        {{ HTML::style('assets/js/admin-master.js') }}        
+        {{ HTML::script('assets/js/jquery.js') }}
+        {{ HTML::script('assets/js/bootstrap.min.js') }}        
+        {{ HTML::script('assets/js/admin-master.js') }}        
     </body>
 </html>

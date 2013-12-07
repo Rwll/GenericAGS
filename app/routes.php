@@ -13,11 +13,25 @@
 
 Route::get('/', function()
 {
-	return View::make('admin.dashboard')->with('title','sa');
+	return View::make('admin_conversations')->with('title','sa');
 });
 
-Route::group(array('prefix' => 'admin'),function(){
+
+Route::get('admin/login',array(
+	'as'	=>	'admin-login',
+	'uses'	=>	'AdminController@showLogin'
+));
+Route::post('admin/login',array(
+	'as'	=>	'admin-login-execute',
+	'uses'	=>	'AdminController@attempLogin'
+));
+Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 	
+	Route::get('logout',array(
+		'as'	=>	'admin-logout',
+		'uses'	=>	'AdminController@attempLogout'
+	));
+
 	Route::get('dashboard',array(
 		'as'	=>	'admin-dashboard',
 		'uses'	=>	'AdminController@showDashboard'
@@ -54,4 +68,23 @@ Route::group(array('prefix' => 'admin'),function(){
 		'as'	=>	'admin-broadcasts',
 		'uses'	=>	'AdminController@showBroadcasts'
 	));
+
 });
+
+/*
+|
+|	Routes for Api that requires administrative access
+|
+*/
+Route::group(array('prefix' => 'api', 'before' => 'basic.once'),function(){
+
+	Route::get('universities',  function(){
+		return Input::get('a');
+	});
+
+	Route::post('universities',  function(){
+		return Input::get('a');
+	});
+
+});
+

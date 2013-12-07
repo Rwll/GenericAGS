@@ -2,7 +2,42 @@
 
 class AdminController extends BaseController {
 
-	
+	public function showLogin()
+	{
+		return View::make('admin.login')
+			->with('title','Login');
+	}		
+
+	public function attempLogin()
+	{
+		$validation = User::validate(Input::all());
+
+		if(!($validation->fails())){
+			if(Auth::attempt(array(
+				'username'	=> Input::get('username'),
+				'password'	=> Input::get('password'),
+				'role'		=> 'admin'
+				))){
+				return Redirect::Route('admin-dashboard');
+			} else {
+				return Redirect::Route('admin-login');
+			}
+		}else{
+			return Redirect::Route('admin-login')
+				->withErrors($validation);
+		}
+	}
+
+	public function attempLogout()
+	{
+		Auth::logout();
+		if(Auth::guest()){
+			return Redirect::Route('admin-login');
+		}else {
+			return Redirect::Route('admin-dashboard');
+		}
+	}
+
 	public function showDashboard()
 	{
 		return View::make('admin.dashboard')
