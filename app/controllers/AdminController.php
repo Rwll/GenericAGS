@@ -20,11 +20,14 @@ class AdminController extends BaseController {
 				))){
 				return Redirect::Route('admin-dashboard');
 			} else {
-				return Redirect::Route('admin-login');
+				return Redirect::Route('admin-login')
+					->withErrors('Incorrect username or password')
+					->withInput(Input::except('password'));
 			}
 		}else{
 			return Redirect::Route('admin-login')
-				->withErrors($validation);
+				->withErrors($validation)
+				->withInput(Input::except('password'));
 		}
 	}
 
@@ -52,8 +55,11 @@ class AdminController extends BaseController {
 
 	public function manageUniversities()
 	{
+		$universities = University::get();
+
 		return View::make('admin.universities')
-			->with('title','Manage Universities');
+			->with('title','Manage Universities')
+			->with('universities',$universities);
 	}
 
 	public function manageAlumni()

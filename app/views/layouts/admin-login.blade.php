@@ -11,7 +11,6 @@
         <div class="container">
             @yield('content')
         </div>
-        @include('commons.admin.footer')
 
         {{ HTML::script('assets/js/jquery.js') }}
         {{ HTML::script('assets/js/bootstrap.min.js') }}        

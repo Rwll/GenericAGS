@@ -18,6 +18,7 @@ class CreateUniversitiesTable extends Migration {
 			$table->string('name');
 			$table->string('email');
 			$table->string('contact');
+			$table->string('website');
 			$table->string('address');
 			$table->text('description');
 			$table->boolean('enabled')->default(true);

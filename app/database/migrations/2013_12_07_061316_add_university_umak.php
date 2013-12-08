@@ -18,6 +18,7 @@ class AddUniversityUmak extends Migration {
 		$umak->email = "umak@umak.com";
 		$umak->contact = "7510595";
 		$umak->address = "West Rembo, Makati";
+		$umak->website = "umak.gov.ph";
 		$umak->description = "THe F";
 		$umak->save();
 	}

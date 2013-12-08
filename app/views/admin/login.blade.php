@@ -1,28 +1,44 @@
 @extends('layouts.admin-login')
 
 @section('content')
-	<h1>login</h1>
-	@if($errors->has())
-		<ul>
-			{{ $errors->first('username','<li>:message</li>')}}
-			{{ $errors->first('password','<li>:message</li>')}}
-		</ul>
-	@endif
-	<div class="well col-md-6 col-md-offset-3">
-
+	<div class="well col-md-6 col-md-offset-3" id="loginWell">
+		<div class="row">
+			<h2 class="col-md-8 col-md-offset-2">
+				<i class="fa fa-user fa-fw"></i>
+				Administrator
+			</h2> 
+					
+		</div>
+		<hr>
+		@if($errors->has())
+			<div class="alert alert-danger alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<ul>
+					@foreach ($errors->all() as $error)
+						<li>{{ $error }}</li>
+					@endforeach
+				</ul>
+			</div>
+		@endif
 		{{ Form::open( array(
 			'method'	=> 'post' , 
 			'uses'		=> URL::Route('admin-login-execute')
 			) ) }}
 
-		<label>Username:</label>
-		<input name="username" type="text" class="form-control"/>
-		<br>
-		<label>Password:</label>
-		<input name="password" type="password" class="form-control"/>
-
-		{{ Form::submit('Login') }}
-
+		<div class="form-group">
+			{{ Form::label('username','Username:') }}
+			{{ Form::text('username', Input::old('username'),array(
+					'class'=>'form-control')) }}
+		</div>
+		<div class="form-group">
+			{{ Form::label('password','Password:') }}
+			<input name="password" type="password" class="form-control"/>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">
+				<i class="fa fa-sign-in fa-fw"></i> Login
+			</button>
+		</div>
 		{{ Form::close() }}
 	</div>
 @stop

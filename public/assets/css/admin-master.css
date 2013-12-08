@@ -11,3 +11,7 @@
 .recipient:hover{
 	background-color: #f04124;
 }
+#adduniversity,
+#viewuniversity{
+	display: none;
+}

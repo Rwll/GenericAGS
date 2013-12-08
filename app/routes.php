@@ -76,15 +76,21 @@ Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 |	Routes for Api that requires administrative access
 |
 */
-Route::group(array('prefix' => 'api', 'before' => 'basic.once'),function(){
+Route::group(array('prefix' => 'api', 'before' => 'auth'),function(){
 
-	Route::get('universities',  function(){
-		return Input::get('a');
+	Route::get('university/{id}', array(
+		'as' => 'api-getUniversity',
+		'uses' => 'ApiController@getUniversity'
+	));
+
+	Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
+
+		Route::post('university/update', array(
+			'as' => 'api-updateUniversity',
+			'uses' => 'ApiController@updateUniversity'
+		));
+
 	});
-
-	Route::post('universities',  function(){
-		return Input::get('a');
-	});
-
 });
+
 
