@@ -20,18 +20,18 @@ class ApiController extends BaseController {
 			return Response::json(array(
 				'error'	=>	true,
 				'data'	=>	$validation->errors()->toarray()),
-				400
+				200
 			);
 		}else{
-			$umak = University::find(Input::get('id'));
-			$umak->abbreviation = Input::get('abbreviation');
-			$umak->name = Input::get('name');
-			$umak->email = Input::get('email');
-			$umak->contact = Input::get('contact');
-			$umak->address = Input::get('address');
-			$umak->website = Input::get('website');
-			$umak->description = Input::get('description');
-			$umak->save();
+			$univ = University::find(Input::get('id'));
+			$univ->abbreviation = Input::get('abbreviation');
+			$univ->name = Input::get('name');
+			$univ->email = Input::get('email');
+			$univ->contact = Input::get('contact');
+			$univ->address = Input::get('address');
+			$univ->website = Input::get('website');
+			$univ->description = Input::get('description');
+			$univ->save();
 
 			return Response::json(array(
 				'error'	=>	false,
@@ -39,5 +39,45 @@ class ApiController extends BaseController {
 				200
 			);
 		}
+	}
+
+	public function addUniversity()
+	{
+		$validation = University::validate(Input::all());
+
+		if($validation->fails()){
+			return Response::json(array(
+				'error'	=>	true,
+				'data'	=>	$validation->errors()->toarray()),
+				400
+			);
+		}else{
+			$univ = new University();
+			$univ->abbreviation = Input::get('abbreviation');
+			$univ->name = Input::get('name');
+			$univ->email = Input::get('email');
+			$univ->contact = Input::get('contact');
+			$univ->address = Input::get('address');
+			$univ->website = Input::get('website');
+			$univ->description = Input::get('description');
+			$univ->save();
+
+			return Response::json(array(
+				'error'	=>	false,
+				'data'	=>	$validation->errors()->toarray()),
+				200
+			);
+		}
+	}
+
+	public function getUniversities()
+	{
+		$universities = University::get();
+
+		return Response::json(array(
+			'error'	=>	false,
+			'data'	=>	$universities->toarray()),
+			200
+		);
 	}
 }

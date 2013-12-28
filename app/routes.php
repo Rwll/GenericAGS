@@ -90,6 +90,11 @@ Route::group(array('prefix' => 'api', 'before' => 'auth'),function(){
 			'uses' => 'ApiController@updateUniversity'
 		));
 
+		Route::get('universities', array(
+			'as' => 'api-universities',
+			'uses' => 'ApiController@getUniversities'
+		));
+
 	});
 });
 

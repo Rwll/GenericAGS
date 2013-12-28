@@ -18,7 +18,8 @@
 	    				<i class="fa fa-plus fa-fw"></i> 
 	    				Add University
 	    			</button>
-	    			<button class="btn btn-info btn-sm">
+	    			<button class="btn btn-info btn-sm"
+	    				id="refreshuniversitiesbtn">
 	    				<i class="fa fa-refresh fa-fw"></i> 
 	    				Refresh
 	    			</button>
@@ -32,7 +33,7 @@
 	    						<th class="col-md-3">Actions</th>
 	    					</tr>
 	    				</thead>
-	    				<tbody>
+	    				<tbody id="universityListTableBody">
 	    					@foreach($universities as $university)
 	    					<tr>
 	    						<td>{{ $university->id }}</td>
