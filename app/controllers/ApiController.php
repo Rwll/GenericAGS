@@ -49,7 +49,7 @@ class ApiController extends BaseController {
 			return Response::json(array(
 				'error'	=>	true,
 				'data'	=>	$validation->errors()->toarray()),
-				400
+				200
 			);
 		}else{
 			$univ = new University();

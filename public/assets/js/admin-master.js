@@ -42,25 +42,6 @@ $(document).ready(function(){
 				console.log(data['data']);
 		},'json');
 	});
-	// $('#edit_univ_save').click(function(e){
-	// 	$.post("http://localhost/GenericsATS/public/api/admin/university/update"
-	// 		,
-	// 		{
-	// 			id: $(this).val(),
-	// 			name: $('#edit_univ_name').val(),
-	// 			abbreviation: $('#edit_univ_abb').val(),
-	// 			email: $('#edit_univ_email').val(),
-	// 			contact: $('#edit_univ_contact').val(),
-	// 			website: $('#edit_univ_website').val(),
-	// 			address: $('#edit_univ_address').val(),
-	// 			description: $('#edit_univ_desc').val()
-	// 		}
-	// 		,function(data){
-	// 			console.log(data);
-	// 		}
-	// 	);
-	// 	e.preventDefault();
-	// });
 	$("#edit_univ_form").submit(function(e)
 	{
 	    var postData = $(this).serializeArray();
@@ -79,6 +60,27 @@ $(document).ready(function(){
 	            //if fails      
 	        }
 	    });
+	    e.preventDefault(); //STOP default action
+	});
+	$("#add_univ_form").submit(function(e)
+	{
+	    var postData = $(this).serializeArray();
+	    var formURL = $(this).attr("action");
+	    $.ajax(
+	    {
+	        url : formURL,
+	        type: "POST",
+	        data : postData,
+	        success:function(data, textStatus, jqXHR) 
+	        {
+	            console.log(data);
+	        },
+	        error: function(jqXHR, textStatus, errorThrown) 
+	        {
+	            //if fails      
+	        }
+	    });
+	    console.log("added 1");
 	    e.preventDefault(); //STOP default action
 	});
 	$('#refreshuniversitiesbtn').click(function(){
