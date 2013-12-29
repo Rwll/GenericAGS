@@ -11,20 +11,25 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('admin_conversations')->with('title','sa');
+Route::get('/',array(
+	'as'	=>	'home',
+	'uses'	=>	'HomeController@showWelcome'
+));
+
+Route::group(array('before' => 'guest'),function(){
+
+	Route::get('admin/login',array(
+		'as'	=>	'admin-login',
+		'uses'	=>	'AdminController@showLogin'
+	));
+	Route::post('admin/login',array(
+		'as'	=>	'admin-login-execute',
+		'uses'	=>	'AdminController@attempLogin'
+	));
+
 });
 
 
-Route::get('admin/login',array(
-	'as'	=>	'admin-login',
-	'uses'	=>	'AdminController@showLogin'
-));
-Route::post('admin/login',array(
-	'as'	=>	'admin-login-execute',
-	'uses'	=>	'AdminController@attempLogin'
-));
 Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 	
 	Route::get('logout',array(
@@ -83,6 +88,11 @@ Route::group(array('prefix' => 'api', 'before' => 'auth'),function(){
 		'uses' => 'ApiController@getUniversity'
 	));
 
+	Route::get('universities', array(
+		'as' => 'api-universities',
+		'uses' => 'ApiController@getUniversities'
+	));
+
 	Route::group(array('prefix' => 'admin', 'before' => 'auth.admin'),function(){
 
 		Route::post('university/update', array(
@@ -95,10 +105,7 @@ Route::group(array('prefix' => 'api', 'before' => 'auth'),function(){
 			'uses' => 'ApiController@addUniversity'
 		));
 
-		Route::get('universities', array(
-			'as' => 'api-universities',
-			'uses' => 'ApiController@getUniversities'
-		));
+		
 
 	});
 });

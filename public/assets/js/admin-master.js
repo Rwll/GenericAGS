@@ -84,7 +84,7 @@ $(document).ready(function(){
 	    e.preventDefault(); //STOP default action
 	});
 	$('#refreshuniversitiesbtn').click(function(){
-		$.get("http://localhost/GenericsATS/public/api/admin/universities"
+		$.get("http://localhost/GenericsATS/public/api/universities"
 			,function(data,status){
 				$("#universityListTableBody").html("");
 				for(i=0;i<data["data"]["length"];i++){

@@ -17,6 +17,7 @@ class CreateAdminsTable extends Migration {
 			$table->integer('user_id')->unsigned();
 			$table->string('firstname');
 			$table->string('lastname');
+			$table->string('contact');
 			$table->foreign('user_id')
 					->references('id')
 					->on('users')
